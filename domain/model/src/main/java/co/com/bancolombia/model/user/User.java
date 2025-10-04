@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -12,6 +15,15 @@ import lombok.Setter;
 @Builder(toBuilder = true)
 public class User {
 
-
+    private Long id;
+    private String name;
+    private String lastName;
+    private String email;
+    private String password;
+    private LocalDate birthDate;
+    private String address;
+    private String phone;
+    private BigDecimal salary;
+    private Role role;
 
 }
