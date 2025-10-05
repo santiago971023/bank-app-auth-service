@@ -12,6 +12,7 @@ dependencies {
     testImplementation 'com.fasterxml.jackson.core:jackson-databind'
 }
 
+
 tasks.register('explodedJar', Copy) {
     with jar
     into layout.buildDirectory.dir("exploded")

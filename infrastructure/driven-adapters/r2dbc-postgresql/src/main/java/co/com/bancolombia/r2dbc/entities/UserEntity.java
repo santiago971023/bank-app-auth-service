@@ -1,24 +1,28 @@
-package co.com.bancolombia.model.user;
-import lombok.Builder;
+package co.com.bancolombia.r2dbc.entities;
+
+import co.com.bancolombia.model.user.Role;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder(toBuilder = true)
-public class User {
+@Builder
+@Table(name = "users")
+@Entity
+public class UserEntity {
 
+    @Id
     private Long id;
     private String dni;
     private String name;
-    private String lastName;
+    private String lastname;
     private String email;
     private String password;
     private LocalDate birthDate;
